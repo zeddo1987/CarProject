@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${course}"
+      method="post">
+    year :<input type="number" th:field="*{year}"/>
+    <span th:if="${#fields.hasErrors('year')}"
+          th:errors="*{year}"></span><br />
+    Make :<textarea rows="3" th:field="*{make}"/>
+    <span th:if="${#fields.hasErrors('make')}"
+          th:errors="*{make}"></span>
+    Model :<input type="text" th:field="*{model}"/>
+    <span th:if="${#fields.hasErrors('model')}"
+          th:errors="*{model}"></span><br />
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>
+
+</body>
+</html>

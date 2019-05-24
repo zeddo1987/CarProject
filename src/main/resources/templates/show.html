@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/">Show All</a><b/>
+    Year :<span th:number="${car.year}"></span><br />
+    Make :<span th:text="${car.make}"></span><br />
+    Model :<p th:text="${car.model}"></p><br />
+    <a th:href="@{/delete/{make}(make=${car.make})}">Delete this car</a>
+</body>
+</html>
